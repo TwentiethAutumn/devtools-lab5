@@ -1,0 +1,39 @@
+<idea-plugin>
+  <id>ru.itmo.extended.todo</id>
+  <name>ExtendedTODO</name>
+  <version>1.0</version>
+  <vendor email="pez1nmax@mail.ru">Pezin Maxim</vendor>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <action
+            id="ru.itmo.extended.todo.RPNCalculator"
+            class="ru.itmo.extended.todo.RPNCalculator"
+            text="Calculate"
+            description="Calculator">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+      <keyboard-shortcut
+              keymap="$default"
+              first-keystroke="alt C"/>
+    </action>
+    <action
+            id="ru.itmo.extended.todo.PopupDialog"
+            class="ru.itmo.extended.todo.PopupDialog"
+            text="Cat fact"
+            description="Random cat fact">
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+    </action>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>
